@@ -1,6 +1,6 @@
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, classification_report
-from src.utils import get_logger, ensure_dir
+from utils import get_logger, ensure_dir
 import joblib
 import json
 
@@ -36,6 +36,7 @@ class ModelTrain():
     
     def save_model(self):
         path = self.train_cfg["model_output_path"]
+        path = "/opt/airflow/models/model.pkl"
         ensure_dir(path)
         joblib.dump(self.model, path)
         self.logger.info(f"Saved model to {path}")
@@ -44,6 +45,7 @@ class ModelTrain():
     
     def save_metrics(self, metrics):
         path = self.train_cfg["metrics_output_path"]
+        path = "/opt/airflow/report/metrics.csv"
         ensure_dir(path)
         with open(path, "w") as f:
             json.dump(metrics, f, indent=2)

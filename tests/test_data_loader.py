@@ -2,7 +2,7 @@ import pandas as pd
 import boto3
 import io
 import pytest
-from src.data_loader import DataLoader
+from data_loader import DataLoader
 
 def test_load_local(tmp_path):
     # Prepare CSV

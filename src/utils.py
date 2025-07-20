@@ -30,11 +30,11 @@ def setup_logging(log_file="file_errors.log",
     file_handler.setFormatter(logging.Formatter(format))
     root.addHandler(file_handler)
 
-    # console handler - messages to appear in the console as well
-    console_handler  = logging.StreamHandler()
-    console_handler .setLevel(level)
-    console_handler .setFormatter(logging.Formatter(format))
-    root.addHandler(console_handler )
+    # # console handler - messages to appear in the console as well
+    # console_handler  = logging.StreamHandler()
+    # console_handler .setLevel(level)
+    # console_handler .setFormatter(logging.Formatter(format))
+    # root.addHandler(console_handler )
 
     return 
 

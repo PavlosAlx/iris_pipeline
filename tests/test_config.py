@@ -1,13 +1,7 @@
-# import yaml
-# import tempfile
-# import os
-# import pytest
-# from src.config import Config
-
 import os
 import yaml
 import tempfile
-from src.config import Config
+from config import Config
 
 def test_config_loads(tmp_path, monkeypatch):
     # Create a temp YAML

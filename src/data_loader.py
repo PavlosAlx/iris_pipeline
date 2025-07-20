@@ -2,7 +2,7 @@
 import pandas as pd
 import os
 import boto3
-from src.utils import get_logger
+from utils import get_logger
 
 class DataLoader():
 

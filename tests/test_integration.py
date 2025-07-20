@@ -6,7 +6,7 @@ import json
 import pandas as pd
 import pytest
 
-from src.pipeline import main as pipeline_main
+from pipeline import main as pipeline_main
 
 def test_end_to_end_pipeline(tmp_path, monkeypatch):
     # 1) Build a tiny CSV

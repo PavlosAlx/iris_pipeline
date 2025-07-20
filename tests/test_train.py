@@ -3,7 +3,7 @@
 import pandas as pd
 import pytest
 import json
-from src.train import ModelTrain
+from train import ModelTrain
 
 @pytest.fixture
 def small_data():

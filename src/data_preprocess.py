@@ -2,7 +2,7 @@
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
-from src.utils import get_logger
+from utils import get_logger
 import numpy as np
 ## Assuming future data might have missing values / need scale, added:
 ## - fix missing values

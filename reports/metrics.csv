@@ -1,0 +1,4 @@
+{
+  "accuracy": 0.9666666666666667,
+  "report": "              precision    recall  f1-score   support\n\n      setosa       1.00      1.00      1.00        10\n  versicolor       1.00      0.90      0.95        10\n   virginica       0.91      1.00      0.95        10\n\n    accuracy                           0.97        30\n   macro avg       0.97      0.97      0.97        30\nweighted avg       0.97      0.97      0.97        30\n"
+}
