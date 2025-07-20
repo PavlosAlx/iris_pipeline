@@ -37,24 +37,3 @@ class DataLoader():
         df = pd.read_csv(body)
         self.logger.info(f"Loaded {len(df)} rows from S3")
         return df
-    
-# def data_load_sklearn():
-
-#     # Load and prepare iris dataset
-#     # print("Loading and preparing the Iris dataset...")
-
-#     logger = get_logger(__name__)
-#     logger.info("Loading and preparing the Iris dataset...")
-
-#     try:
-            
-#         iris = load_iris()
-#         X = pd.DataFrame(iris.data, columns=iris.feature_names)
-#         y = pd.Series(iris.target)
-#         logger.info("Iris dataset loaded...")
-#     except Exception as e:
-#         logger.error("Failed to load the Iris dataset", exc_info=True)
-
-#     return iris,X,y # mipws den prepei na girizw olo to dataset? an einai megalo?
-
-

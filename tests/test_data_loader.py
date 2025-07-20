@@ -37,30 +37,3 @@ def test_load_s3():
     df = loader.load()
     assert list(df.columns) == ["a","b"]
     assert df.shape == (2,2)
-
-
-# import pandas as pd
-# from sklearn.datasets import load_iris
-# import pytest
-# from src.data_loader import DataLoader
-
-# def test_data_load_sklearn_shapes():
-#     iris, X, y = DataLoader()
-#     # iris.data is (150,4)
-#     assert hasattr(iris, "data") 
-#     assert X.shape == iris.data.shape
-#     assert y.shape[0] == iris.data.shape[0]
-#     # target_names matches sklearn's
-#     assert set(iris.target_names) == set(load_iris().target_names)
-
-# @pytest.mark.parametrize("num_samples", [1, 5, 10])
-# def test_data_load_sklearn_returns_dataframe_series(num_samples):
-#     # Slice first N rows
-#     iris, X, y = DataLoader()
-#     X_sub = X.iloc[:num_samples]
-#     y_sub = y.iloc[:num_samples]
-#     # they remain DataFrame/Series
-#     assert isinstance(X_sub, pd.DataFrame)
-#     assert isinstance(y_sub, pd.Series)
-#     assert len(X_sub) == num_samples
-#     assert len(y_sub) == num_samples
