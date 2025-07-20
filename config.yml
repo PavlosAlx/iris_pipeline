@@ -1,0 +1,49 @@
+# -----------------------------------------------------------------------------
+# config.yml
+#
+# Project‑wide configuration for the Iris training pipeline
+# -----------------------------------------------------------------------------
+
+data_source:
+  # “local” will read from a file on disk
+  # “s3” will use bucket/key (requires AWS credentials)
+  type: local
+
+  # When type: local
+  path: data/iris_dataset.csv
+
+  # When type: s3 (uncomment and fill in)
+  # bucket: my‑iris‑bucket
+  # key: raw/iris.csv
+  # profile: default
+
+# processed_data_path: data/processed/iris_processed.csv
+
+training:
+  # train/test split parameters
+  test_size: 0.2
+  random_state: 42
+
+  # logistic regression hyperparameters
+  hyperparameters:
+    penalty: l2
+    C: 1.0
+    solver: lbfgs
+    max_iter: 200
+
+  # where to write out the trained pipeline (scaler+model)
+  model_output_path: models/logreg_pipeline.joblib
+
+  # where to dump JSON metrics
+  metrics_output_path: reports/metrics.json
+
+evaluation:
+  # must match iris.target_names order
+  labels:
+    - setosa
+    - versicolor
+    - virginica
+
+  # toggle saving a confusion‑matrix image
+  plot_confusion: true
+  confusion_output_path: reports/confusion_matrix.png

@@ -1,0 +1,93 @@
+{
+  "Comment": "Iris pipeline orchestration",
+  "StartAt": "DataLoad",
+  "States": {
+    "DataLoad": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "arn:aws:lambda:us‑east‑1:123456789012:function:DataLoadFunction",
+        "Payload.$": "$"
+      },
+      "Retry": [{
+        "ErrorEquals": ["States.ALL"],
+        "IntervalSeconds": 5,
+        "MaxAttempts": 2,
+        "BackoffRate": 2.0
+      }],
+      "Catch": [{
+        "ErrorEquals": ["States.ALL"],
+        "ResultPath": "$.error",
+        "Next": "Fail"
+      }],
+      "Next": "Preprocess"
+    },
+    "Preprocess": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "arn:aws:lambda:us‑east‑1:123456789012:function:PreprocessFunction",
+        "Payload.$": "$"
+      },
+      "Retry": [{
+        "ErrorEquals": ["States.ALL"],
+        "IntervalSeconds": 5,
+        "MaxAttempts": 2,
+        "BackoffRate": 2.0
+      }],
+      "Catch": [{
+        "ErrorEquals": ["States.ALL"],
+        "ResultPath": "$.error",
+        "Next": "Fail"
+      }],
+      "Next": "Train"
+    },
+    "Train": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "arn:aws:lambda:us‑east‑1:123456789012:function:TrainFunction",
+        "Payload.$": "$"
+      },
+      "Retry": [{
+        "ErrorEquals": ["States.ALL"],
+        "IntervalSeconds": 10,
+        "MaxAttempts": 2,
+        "BackoffRate": 2.0
+      }],
+      "Catch": [{
+        "ErrorEquals": ["States.ALL"],
+        "ResultPath": "$.error",
+        "Next": "Fail"
+      }],
+      "Next": "Evaluate"
+    },
+    "Evaluate": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "arn:aws:lambda:us‑east‑1:123456789012:function:EvaluateFunction",
+        "Payload.$": "$"
+      },
+      "Retry": [{
+        "ErrorEquals": ["States.ALL"],
+        "IntervalSeconds": 5,
+        "MaxAttempts": 2,
+        "BackoffRate": 2.0
+      }],
+      "Catch": [{
+        "ErrorEquals": ["States.ALL"],
+        "ResultPath": "$.error",
+        "Next": "Fail"
+      }],
+      "Next": "Success"
+    },
+    "Fail": {
+      "Type": "Fail",
+      "Cause": "Step Function encountered an error"
+    },
+    "Success": {
+      "Type": "Succeed"
+    }
+  }
+}

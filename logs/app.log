@@ -1,0 +1,237 @@
+2025-07-18 20:48:56,002 - INFO - __main__- Pipeline starting...
+2025-07-18 20:48:56,003 - INFO - src.data_loader- Loading and preparing the Iris dataset...
+2025-07-18 20:48:56,007 - INFO - src.data_loader- Iris dataset loaded...
+2025-07-18 20:48:56,020 - INFO - __main__- Pipeline finished successfully
+2025-07-18 20:54:01,852 - INFO - __main__- Pipeline starting...
+2025-07-18 20:54:01,852 - INFO - src.data_loader- Loading and preparing the Iris dataset...
+2025-07-18 20:54:01,858 - INFO - src.data_loader- Iris dataset loaded...
+2025-07-18 20:54:01,862 - ERROR - __main__- Pipeline failed with exception
+Traceback (most recent call last):
+  File "C:\Users\pavlo\Downloads\Challenge 1 - Build a Pipeline-20250715T095450Z-1-001 (5)\Challenge 1 - Build a Pipeline\pipeline\src\pipeline.py", line 29, in <module>
+    run()
+    ~~~^^
+  File "C:\Users\pavlo\Downloads\Challenge 1 - Build a Pipeline-20250715T095450Z-1-001 (5)\Challenge 1 - Build a Pipeline\pipeline\src\pipeline.py", line 10, in run
+    X_train, X_test, y_train, y_test, scaler = data_preprocess(raw, X, y)
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\pavlo\Downloads\Challenge 1 - Build a Pipeline-20250715T095450Z-1-001 (5)\Challenge 1 - Build a Pipeline\pipeline\src\data_preprocess.py", line 54, in data_preprocess
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size)
+                                       ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\pavlo\Downloads\Challenge 1 - Build a Pipeline-20250715T095450Z-1-001 (5)\Challenge 1 - Build a Pipeline\pipeline\src\data_preprocess.py", line 27, in train_test_split
+    X_train, X_test, y_train, y_test = train_test_split(
+                                       ~~~~~~~~~~~~~~~~^
+        X, y, test_size=test_size,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        random_state=42, stratify=y # Stratify to ensure class proportions
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+TypeError: train_test_split() got an unexpected keyword argument 'random_state'
+2025-07-18 20:55:02,747 - INFO - __main__- Pipeline starting...
+2025-07-18 20:55:02,748 - INFO - src.data_loader- Loading and preparing the Iris dataset...
+2025-07-18 20:55:02,754 - INFO - src.data_loader- Iris dataset loaded...
+2025-07-18 20:55:02,757 - ERROR - __main__- Pipeline failed with exception
+Traceback (most recent call last):
+  File "C:\Users\pavlo\Downloads\Challenge 1 - Build a Pipeline-20250715T095450Z-1-001 (5)\Challenge 1 - Build a Pipeline\pipeline\src\pipeline.py", line 29, in <module>
+    run()
+    ~~~^^
+  File "C:\Users\pavlo\Downloads\Challenge 1 - Build a Pipeline-20250715T095450Z-1-001 (5)\Challenge 1 - Build a Pipeline\pipeline\src\pipeline.py", line 10, in run
+    X_train, X_test, y_train, y_test, scaler = data_preprocess(raw, X, y)
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\pavlo\Downloads\Challenge 1 - Build a Pipeline-20250715T095450Z-1-001 (5)\Challenge 1 - Build a Pipeline\pipeline\src\data_preprocess.py", line 56, in data_preprocess
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size, random_state)
+                                       ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pavlo\Downloads\Challenge 1 - Build a Pipeline-20250715T095450Z-1-001 (5)\Challenge 1 - Build a Pipeline\pipeline\src\data_preprocess.py", line 27, in train_test_split
+    X_train, X_test, y_train, y_test = train_test_split(
+                                       ~~~~~~~~~~~~~~~~^
+        X, y, test_size=test_size,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        random_state=random_state,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        stratify=y # Stratify to ensure class proportions
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+TypeError: train_test_split() got an unexpected keyword argument 'stratify'
+2025-07-18 20:55:43,178 - INFO - __main__- Pipeline starting...
+2025-07-18 20:55:43,178 - INFO - src.data_loader- Loading and preparing the Iris dataset...
+2025-07-18 20:55:43,182 - INFO - src.data_loader- Iris dataset loaded...
+2025-07-18 20:55:43,187 - ERROR - __main__- Pipeline failed with exception
+Traceback (most recent call last):
+  File "C:\Users\pavlo\Downloads\Challenge 1 - Build a Pipeline-20250715T095450Z-1-001 (5)\Challenge 1 - Build a Pipeline\pipeline\src\pipeline.py", line 29, in <module>
+    run()
+    ~~~^^
+  File "C:\Users\pavlo\Downloads\Challenge 1 - Build a Pipeline-20250715T095450Z-1-001 (5)\Challenge 1 - Build a Pipeline\pipeline\src\pipeline.py", line 10, in run
+    X_train, X_test, y_train, y_test, scaler = data_preprocess(raw, X, y)
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\pavlo\Downloads\Challenge 1 - Build a Pipeline-20250715T095450Z-1-001 (5)\Challenge 1 - Build a Pipeline\pipeline\src\data_preprocess.py", line 55, in data_preprocess
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size, random_state)
+                                       ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pavlo\Downloads\Challenge 1 - Build a Pipeline-20250715T095450Z-1-001 (5)\Challenge 1 - Build a Pipeline\pipeline\src\data_preprocess.py", line 27, in train_test_split
+    X_train, X_test, y_train, y_test = train_test_split(
+                                       ~~~~~~~~~~~~~~~~^
+        X, y, test_size=test_size,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        random_state=random_state,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        stratify=y) # Stratify to ensure class proportions
+        ^^^^^^^^^^^
+TypeError: train_test_split() got an unexpected keyword argument 'stratify'
+2025-07-18 20:57:01,847 - INFO - __main__- Pipeline starting...
+2025-07-18 20:57:01,848 - INFO - src.data_loader- Loading and preparing the Iris dataset...
+2025-07-18 20:57:01,853 - INFO - src.data_loader- Iris dataset loaded...
+2025-07-18 20:57:01,857 - ERROR - __main__- Pipeline failed with exception
+Traceback (most recent call last):
+  File "C:\Users\pavlo\Downloads\Challenge 1 - Build a Pipeline-20250715T095450Z-1-001 (5)\Challenge 1 - Build a Pipeline\pipeline\src\pipeline.py", line 29, in <module>
+    run()
+    ~~~^^
+  File "C:\Users\pavlo\Downloads\Challenge 1 - Build a Pipeline-20250715T095450Z-1-001 (5)\Challenge 1 - Build a Pipeline\pipeline\src\pipeline.py", line 10, in run
+    X_train, X_test, y_train, y_test, scaler = data_preprocess(raw, X, y)
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\pavlo\Downloads\Challenge 1 - Build a Pipeline-20250715T095450Z-1-001 (5)\Challenge 1 - Build a Pipeline\pipeline\src\data_preprocess.py", line 55, in data_preprocess
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size, random_state)
+                                       ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pavlo\Downloads\Challenge 1 - Build a Pipeline-20250715T095450Z-1-001 (5)\Challenge 1 - Build a Pipeline\pipeline\src\data_preprocess.py", line 27, in train_test_split
+    X_train, X_test, y_train, y_test = train_test_split(
+                                       ~~~~~~~~~~~~~~~~^
+        X, y, test_size=test_size,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        random_state=random_state,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        stratify=y) # Stratify to ensure class proportions
+        ^^^^^^^^^^^
+TypeError: train_test_split() got an unexpected keyword argument 'stratify'
+2025-07-18 20:57:37,026 - INFO - __main__- Pipeline starting...
+2025-07-18 20:57:37,026 - INFO - src.data_loader- Loading and preparing the Iris dataset...
+2025-07-18 20:57:37,031 - INFO - src.data_loader- Iris dataset loaded...
+2025-07-18 20:57:37,037 - INFO - __main__- Pipeline finished successfully
+2025-07-18 20:59:15,684 - INFO - __main__- Pipeline starting...
+2025-07-18 20:59:15,684 - INFO - src.data_loader- Loading and preparing the Iris dataset...
+2025-07-18 20:59:15,689 - INFO - src.data_loader- Iris dataset loaded...
+2025-07-18 20:59:15,699 - INFO - src.data_preprocess- Training set size: 120 samples
+2025-07-18 20:59:15,700 - INFO - src.data_preprocess- Test set size: 30 samples
+2025-07-18 20:59:15,701 - INFO - __main__- Pipeline finished successfully
+2025-07-18 21:01:30,357 - INFO - __main__- Pipeline starting...
+2025-07-18 21:01:30,357 - INFO - src.data_loader- Loading and preparing the Iris dataset...
+2025-07-18 21:01:30,361 - INFO - src.data_loader- Iris dataset loaded...
+2025-07-18 21:01:30,367 - INFO - src.data_preprocess- Training set size: 120 samples
+2025-07-18 21:01:30,367 - INFO - src.data_preprocess- Test set size: 30 samples
+2025-07-18 21:01:30,367 - INFO - __main__- Pipeline finished successfully
+2025-07-18 21:01:47,374 - INFO - __main__- Pipeline starting...
+2025-07-18 21:01:47,375 - INFO - src.data_loader- Loading and preparing the Iris dataset...
+2025-07-18 21:01:47,381 - INFO - src.data_loader- Iris dataset loaded...
+2025-07-18 21:01:47,382 - INFO - src.data_preprocess- Iris dataset loaded with 150 samples and 4 features.
+2025-07-18 21:01:47,389 - INFO - src.data_preprocess- Training set size: 120 samples
+2025-07-18 21:01:47,389 - INFO - src.data_preprocess- Test set size: 30 samples
+2025-07-18 21:01:47,454 - INFO - __main__- Pipeline finished successfully
+2025-07-18 21:02:18,117 - INFO - __main__- Pipeline starting...
+2025-07-18 21:02:18,118 - INFO - src.data_loader- Loading and preparing the Iris dataset...
+2025-07-18 21:02:18,123 - INFO - src.data_loader- Iris dataset loaded...
+2025-07-18 21:02:18,124 - INFO - src.data_preprocess- Iris dataset loaded with 150 samples and 4 features.
+2025-07-18 21:02:18,128 - INFO - src.data_preprocess- Training set size: 120 samples
+2025-07-18 21:02:18,129 - INFO - src.data_preprocess- Test set size: 30 samples
+2025-07-18 21:02:18,178 - INFO - __main__- Pipeline finished successfully
+2025-07-18 21:02:58,820 - INFO - __main__- Pipeline starting...
+2025-07-18 21:02:58,820 - INFO - src.data_loader- Loading and preparing the Iris dataset...
+2025-07-18 21:02:58,825 - INFO - src.data_loader- Iris dataset loaded...
+2025-07-18 21:02:58,827 - INFO - src.data_preprocess- Iris dataset loaded with 150 samples and 4 features.
+2025-07-18 21:02:58,837 - INFO - src.data_preprocess- Training set size: 120 samples
+2025-07-18 21:02:58,837 - INFO - src.data_preprocess- Test set size: 30 samples
+2025-07-18 21:02:58,838 - INFO - __main__- Pipeline finished successfully
+2025-07-18 21:35:39,040 - INFO - __main__- Pipeline starting...
+2025-07-18 21:35:52,870 - INFO - __main__- Pipeline starting...
+2025-07-18 21:35:52,894 - INFO - src.data_loader- Loading and preparing the Iris dataset...
+2025-07-18 21:35:52,904 - INFO - src.data_loader- Iris dataset loaded...
+2025-07-18 21:35:52,905 - INFO - __main__- Pipeline finished successfully
+2025-07-18 21:39:08,145 - INFO - __main__- Pipeline starting...
+2025-07-18 21:39:08,146 - INFO - src.data_loader- Loading and preparing the Iris dataset...
+2025-07-18 21:39:08,152 - INFO - src.data_loader- Iris dataset loaded...
+2025-07-18 21:39:08,153 - INFO - src.data_preprocess- Iris dataset loaded with 150 samples and 4 features.
+2025-07-18 21:39:08,157 - ERROR - __main__- Pipeline failed with exception
+Traceback (most recent call last):
+  File "C:\Users\pavlo\Downloads\Challenge 1 - Build a Pipeline-20250715T095450Z-1-001 (5)\Challenge 1 - Build a Pipeline\pipeline\src\pipeline.py", line 40, in <module>
+    run(config_path)
+    ~~~^^^^^^^^^^^^^
+  File "C:\Users\pavlo\Downloads\Challenge 1 - Build a Pipeline-20250715T095450Z-1-001 (5)\Challenge 1 - Build a Pipeline\pipeline\src\pipeline.py", line 19, in run
+    X_train, X_test, y_train, y_test, scaler = data_preprocess(raw, X, y, cfg)
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\pavlo\Downloads\Challenge 1 - Build a Pipeline-20250715T095450Z-1-001 (5)\Challenge 1 - Build a Pipeline\pipeline\src\data_preprocess.py", line 55, in data_preprocess
+    random_state = cfg['training']['random_size']
+                   ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'random_size'
+2025-07-18 21:39:18,566 - INFO - __main__- Pipeline starting...
+2025-07-18 21:39:18,568 - INFO - src.data_loader- Loading and preparing the Iris dataset...
+2025-07-18 21:39:18,574 - INFO - src.data_loader- Iris dataset loaded...
+2025-07-18 21:39:18,575 - INFO - src.data_preprocess- Iris dataset loaded with 150 samples and 4 features.
+2025-07-18 21:39:18,580 - INFO - src.data_preprocess- Training set size: 120 samples
+2025-07-18 21:39:18,585 - INFO - src.data_preprocess- Test set size: 30 samples
+2025-07-18 21:39:18,586 - INFO - __main__- Pipeline finished successfully
+2025-07-18 21:49:27,539 - INFO - __main__- Pipeline starting...
+2025-07-18 21:49:27,541 - INFO - src.data_loader- Loading and preparing the Iris dataset...
+2025-07-18 21:49:27,546 - INFO - src.data_loader- Iris dataset loaded...
+2025-07-18 21:49:27,548 - INFO - src.data_preprocess- Iris dataset loaded with 150 samples and 4 features.
+2025-07-18 21:49:27,555 - INFO - src.data_preprocess- Training set size: 120 samples
+2025-07-18 21:49:27,555 - INFO - src.data_preprocess- Test set size: 30 samples
+2025-07-18 21:49:27,556 - INFO - __main__- Pipeline finished successfully
+2025-07-18 21:50:54,924 - INFO - __main__- Pipeline starting...
+2025-07-18 21:50:54,926 - INFO - src.data_loader- Loading and preparing the Iris dataset...
+2025-07-18 21:50:54,932 - INFO - src.data_loader- Iris dataset loaded...
+2025-07-18 21:50:54,933 - INFO - src.data_preprocess- Iris dataset loaded with 150 samples and 4 features.
+2025-07-18 21:50:54,941 - INFO - src.data_preprocess- Training set size: 120 samples
+2025-07-18 21:50:54,941 - INFO - src.data_preprocess- Test set size: 30 samples
+2025-07-18 21:50:54,980 - INFO - src.train- Model trained.
+2025-07-18 21:50:54,989 - INFO - src.train- 
+Model Accuracy: 0.9667
+2025-07-18 21:50:54,989 - INFO - src.train- 
+Classification Report:              precision    recall  f1-score   support
+
+      setosa       1.00      1.00      1.00        10
+  versicolor       1.00      0.90      0.95        10
+   virginica       0.91      1.00      0.95        10
+
+    accuracy                           0.97        30
+   macro avg       0.97      0.97      0.97        30
+weighted avg       0.97      0.97      0.97        30
+
+2025-07-18 21:50:54,990 - INFO - __main__- Pipeline finished successfully
+2025-07-19 16:26:34,986 - INFO - __main__- Pipeline starting...
+2025-07-19 16:26:34,999 - INFO - src.data_loader- Loading and preparing the Iris dataset...
+2025-07-19 16:26:35,032 - INFO - src.data_loader- Iris dataset loaded...
+2025-07-19 16:26:35,034 - INFO - src.data_preprocess- Iris dataset loaded with 150 samples and 4 features.
+2025-07-19 16:26:35,042 - INFO - src.data_preprocess- Training set size: 120 samples
+2025-07-19 16:26:35,043 - INFO - src.data_preprocess- Test set size: 30 samples
+2025-07-19 16:26:35,088 - INFO - src.train- Model trained.
+2025-07-19 16:26:35,092 - INFO - src.train- 
+Model Accuracy: 0.9667
+2025-07-19 16:26:35,093 - INFO - src.train- 
+Classification Report:              precision    recall  f1-score   support
+
+      setosa       1.00      1.00      1.00        10
+  versicolor       1.00      0.90      0.95        10
+   virginica       0.91      1.00      0.95        10
+
+    accuracy                           0.97        30
+   macro avg       0.97      0.97      0.97        30
+weighted avg       0.97      0.97      0.97        30
+
+2025-07-19 16:26:35,093 - INFO - __main__- Pipeline finished successfully
+2025-07-19 16:26:50,011 - INFO - __main__- Pipeline starting...
+2025-07-19 16:26:50,012 - INFO - src.data_loader- Loading and preparing the Iris dataset...
+2025-07-19 16:26:50,016 - INFO - src.data_loader- Iris dataset loaded...
+2025-07-19 16:26:50,016 - INFO - src.data_preprocess- Iris dataset loaded with 150 samples and 4 features.
+2025-07-19 16:26:50,020 - INFO - src.data_preprocess- Training set size: 120 samples
+2025-07-19 16:26:50,020 - INFO - src.data_preprocess- Test set size: 30 samples
+2025-07-19 16:26:50,046 - INFO - src.train- Model trained.
+2025-07-19 16:26:50,054 - INFO - src.train- 
+Model Accuracy: 0.9667
+2025-07-19 16:26:50,054 - INFO - src.train- 
+Classification Report:              precision    recall  f1-score   support
+
+      setosa       1.00      1.00      1.00        10
+  versicolor       1.00      0.90      0.95        10
+   virginica       0.91      1.00      0.95        10
+
+    accuracy                           0.97        30
+   macro avg       0.97      0.97      0.97        30
+weighted avg       0.97      0.97      0.97        30
+
+2025-07-19 16:26:50,054 - INFO - __main__- Pipeline finished successfully
